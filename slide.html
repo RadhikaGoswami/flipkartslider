@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            
+        }
+        .product-small-img img{
+            height: 92px;
+            margin:10px 0;
+            cursor: pointer;
+            display: block;
+          opacity:.6;
+        }
+        .product-small-img img:hover{
+            border:1px solid grey;
+            opacity: 1;
+        }
+        .product-small-img{
+            float: left;
+        }
+        .product{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-30%);
+            position: absolute;
+        }
+        
+        .img-container img{
+        height:500px;
+        }
+        .img-container {
+            float: right;
+            padding: 10px;
+
+}
+    </style>
+
+</head>
+<body>
+    <div class="product">
+        <div class="product-small-img">
+    
+            <img src="img1.jpg" onclick="myFuction(this)">
+             <img src="img2.jpg" onclick="myFuction(this)">
+             <img src="img3.jpg" onclick="myFuction(this)">
+            <img src="img4.jpg" onclick="myFuction(this)">
+            </div>
+        
+            <div class="img-container">
+            <img id="imageBox"src="img1.jpg">
+            
+        </div>
+    </div>
+    <script>
+    function myFuction(smallImg){
+    var fullImg=document.getElementById("imageBox");
+        fullImg.src=smallImg.src;
+    }</script>
+ </body>
+</html>
